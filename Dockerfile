@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm ci && npm run build
-RUN cp -r node_modules build/
+RUN cp -r node_modules dist/
 
 FROM node:14-alpine
 
